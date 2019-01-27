@@ -1,31 +1,27 @@
-package Zadenie_6;
-
-import java.util.Scanner;
-
+package Zadanie_6;
 public class Main {
     final int min = 100;
     final int max = 200;
 
     public static void main(String[] args) {
-        Main mm = new Main();
+        Main main = new Main();
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.printf("Podaj liczbę, którą sobie życzę z zakresu od %d do %d\n", mm.min, mm.max);
+        //   Scanner scanner = new Scanner(System.in);
+        System.out.printf("Podaj liczbę, którą z zakresu od %d do %d\n", main.min, main.max);
         Calk calk = new Calk();
+        boolean podzielna;
+        boolean jestWZakresie;
 
-        int probaNr = 0;
-        boolean test;
         do {
-            int liczba = calk.wczytatwanieLiczby(++probaNr);
-            test = (liczba >= mm.min && liczba<= mm.max);
+            int liczba = calk.wczytatwanieLiczby();
+            jestWZakresie = (liczba >= main.min && liczba <= main.max);
+            podzielna = calk.DivisibleByThree(liczba);
 
-
-        } while (test);
-
-
-
-
+            if (podzielna && jestWZakresie) {
+                System.out.println("Twoja liczba jest podzialna przez 3");
+            } else if (jestWZakresie) {
+                System.out.println("Twoja liczba nie jest podzielna przez 3");
+            }
+        } while (!(podzielna && jestWZakresie));
     }
-
-
 }
