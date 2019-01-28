@@ -19,7 +19,7 @@ public class Zadanie_4 {
         int cwiartka = calk.ktoraCwiartka(point);
 
         if (cwiartka == 0) {
-            System.out.println("Jest to środek układu współrzędnych\n" + point.toString());
+            System.out.println("Punkt leży na osi układu współrzędnych\n" + point.toString());
         } else {
             System.out.println("Punkt jest w " + cwiartka + " ćwartce układu współ.\n" + point.toString());
         }

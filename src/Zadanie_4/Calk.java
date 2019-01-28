@@ -6,7 +6,7 @@ public class Calk {
         boolean dodatnieY = (point.getY() > 0);
         byte cwiartka = 0;
 
-        if (point.getX() == 0 && point.getY() == 0) {
+        if (point.getX() == 0 || point.getY() == 0) {
             cwiartka = 0;
         } else if (dodatnieX && dodatnieY) {
             cwiartka = 1;
